@@ -27,11 +27,15 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-
+Plug 'm4xshen/autoclose.nvim'
 
 call plug#end()
 
 colorscheme onedark
+
+lua << EOF
+require("autoclose").setup()
+EOF
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
